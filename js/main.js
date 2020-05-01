@@ -196,5 +196,4 @@
     once: true,
     mirror: false
   });
-
 })(jQuery);

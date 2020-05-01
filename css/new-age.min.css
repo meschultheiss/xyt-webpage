@@ -84,6 +84,14 @@ section {
     padding: 100px 0
 }
 
+figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0px;
+  text-align: center;
+  color: #dd958f;
+}
+
 section h2 {
     font-size: 50px
 }
@@ -104,6 +112,16 @@ section h2 {
     font-weight: 600;
     letter-spacing: 1px
 }
+
+#mainNav .navbar-brand:before{
+content: "";
+display: inline-block;
+width: 15px;
+height: 15px;
+margin-right: 8px;
+background: #416866;
+box-shadow: 1px 1px  #dd958f, 2px 2px  #7b8552, 3px 3px #719dac;
+  }
 
 #mainNav .navbar-brand:focus,
 #mainNav .navbar-brand:hover {
@@ -164,7 +182,8 @@ section h2 {
  		margin-right: 8px;
  		background: #416866;
  		box-shadow: 1px 1px  #dd958f, 2px 2px  #7b8552, 3px 3px #719dac;
-    	},
+    	}
+
     #mainNav .navbar-brand:hover {
         color: #416866;
         text-shadow: 2px 2px 0px #dd958f, -1px -1px 0px #7b8552, -2px -2px 0px #719dac;
@@ -355,7 +374,16 @@ section.features ul {
 
 section.project {
     position: relative;
-    padding: 250px 0;
+}
+section.project .project-title h1 {
+    color: #416866;
+    text-align: left;
+    font-weight: bold;
+}
+section.project .project-title h2 {
+    color: #dd958f;
+    text-align: left;
+    font-size: 20px;
 }
 
 section.cta {
@@ -655,5 +683,34 @@ section.portfolio .section-heading h2 {
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
+}
+@media (min-width:768px) {
+  .zoom {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: center left; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom:hover,  
+  .zoom:active,   
+  .zoom:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(2.08);    
+  -moz-transform: scale(2.08);  
+  -webkit-transform: scale(2.08);  
+  -o-transform: scale(2.08);  
+  transform: scale(2.08); 
+  }
+  
+  /**TIP: Easy escape for touch screens,
+  give gallery's parent container a cursor: pointer.**/
+  .DivName {cursor: pointer}
 }
 
