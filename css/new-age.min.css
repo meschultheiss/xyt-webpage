@@ -337,7 +337,7 @@ section.features .feature-item h3 {
 }
 
 section.features .feature-item i {
-    font-size: 80px;
+    font-size: 50px;
     display: block;
     margin-bottom: 15px;
     background: linear-gradient(to left, #416866, #416866);
@@ -352,6 +352,11 @@ section.features ul {
     list-s
     padding: 0px;
     list-style-position: inside;}
+
+section.project {
+    position: relative;
+    padding: 250px 0;
+}
 
 section.cta {
     position: relative;
