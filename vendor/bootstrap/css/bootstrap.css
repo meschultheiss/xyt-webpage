@@ -7839,7 +7839,7 @@ button.bg-dark:focus {
 
 .shadow-hover:hover {
         color: #416866;
-        box-shadow: 2px 2px #dd958f, 4px 4px #719dac; !important;
+        box-shadow: 2px 2px #dd958f, -2px -2px #719dac; !important;
 }
 
 .shadow-lg {

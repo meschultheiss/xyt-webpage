@@ -38,12 +38,12 @@ a:hover {
 }
 
 hr {
-    max-width: 100px;
-    margin: 25px auto 0;
+    max-width: 80px;
     border-width: 3px;
     border-color: #416866;
-    margin-bottom: 25px; 
-    box-shadow: 2px 2px #dd958f, 4px 4px #719dac;
+    box-shadow: 2px 2px #dd958f, -2px -2px #719dac;
+    text-align:center; 
+    margin: 25 auto;
 }
 
 hr.light {
@@ -600,22 +600,18 @@ section.portfolio .section-heading h2 {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
-  z-index: 1;
-  background: rgba(34, 34, 34, 0.6);
+  z-index: 1;;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: #416866;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
+  z-index: 2;}
 
 .portfolio .portfolio-wrap img {
   transition: all ease-in-out 0.3s;
@@ -639,38 +635,17 @@ section.portfolio .section-heading h2 {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #416866;
+  color: rgba(255, 255, 255, 1);
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
   font-style: italic;
-}
-
-.portfolio .portfolio-wrap .portfolio-links {
-  text-align: center;
-  z-index: 4;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
-  margin: 0 5px 0 0;
-  font-size: 28px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #3498db;
-}
-
-.portfolio .portfolio-wrap:hover {
-  box-shadow: 2px 2px #dd958f, 4px 4px #719dac;
 }
     
 .portfolio .portfolio-wrap:hover::before {
@@ -684,8 +659,115 @@ section.portfolio .section-heading h2 {
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
+
+.portfolio .portfolio-wrap .portfolio-article::before {
+  content: "";
+  background: #dd958f;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0.05;
+  border-radius: 5px;
+}
+    
+.portfolio .portfolio-wrap .portfolio-article:hover::before {
+  opacity: 0.9;
+}
+
+.portfolio .portfolio-wrap .portfolio-mandate::before {
+  content: "";
+  background: #416866;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0.05;
+  border-radius: 5px;
+}
+    
+.portfolio .portfolio-wrap .portfolio-mandate:hover::before {
+  opacity: 0.9;
+}
+
+.portfolio .portfolio-wrap .portfolio-research::before {
+  content: "";
+  background: #719dac;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0.05;
+  border-radius: 5px;
+}
+    
+.portfolio .portfolio-wrap .portfolio-research:hover::before {
+  opacity: 0.9;
+}
+
+
+/*ZOOM*/
 @media (min-width:768px) {
-  .zoom {
+  /*ZOOM_RIGHT_1*/
+  .zoom-right-1 {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: center right; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom-right-1:hover,  
+  .zoom-right-1:active,   
+  .zoom-right-1:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(1.5);    
+  -moz-transform: scale(1.5);  
+  -webkit-transform: scale(1.5);  
+  -o-transform: scale(1.5);  
+  transform: scale(1.5); 
+  }
+
+  /*ZOOM_RIGHT_2*/
+  .zoom-right-2 {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: center right; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom-right-2:hover,  
+  .zoom-right-2:active,   
+  .zoom-right-2:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(2.08);    
+  -moz-transform: scale(2.08);  
+  -webkit-transform: scale(2.08);  
+  -o-transform: scale(2.08);  
+  transform: scale(2.08); 
+  }
+  /*ZOOM_LEFT_1*/
+  .zoom-left-1 {
   -webkit-transition: all 0.5s ease-in-out;    
   -moz-transition: all 0.5s ease-in-out;    
   transition: all 0.5s ease-in-out;     
@@ -697,9 +779,134 @@ section.portfolio .section-heading h2 {
   z-index:100;
   }
   
-  .zoom:hover,  
-  .zoom:active,   
-  .zoom:focus {
+  .zoom-left-1:hover,  
+  .zoom-left-1:active,   
+  .zoom-left-1:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(1.5);    
+  -moz-transform: scale(1.5);  
+  -webkit-transform: scale(1.5);  
+  -o-transform: scale(1.5);  
+  transform: scale(1.5); 
+  }
+  
+  /*ZOOM_LEFT_2*/
+  .zoom-left-2 {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: center left; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom-left-2:hover,  
+  .zoom-left-2:active,   
+  .zoom-left-2:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(2.08);    
+  -moz-transform: scale(2.08);  
+  -webkit-transform: scale(2.08);  
+  -o-transform: scale(2.08);  
+  transform: scale(2.08); 
+  }
+
+  /*ZOOM_BOTTOM_LEFT_1*/
+  .zoom-bottom-left-1 {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: bottom left; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom-bottom-left-1:hover,  
+  .zoom-bottom-left-1:active,   
+  .zoom-bottom-left-1:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(1.5);    
+  -moz-transform: scale(1.5);  
+  -webkit-transform: scale(1.5);  
+  -o-transform: scale(1.5);  
+  transform: scale(1.5); 
+  }
+  
+  /*ZOOM_BOTTOM_LEFT_2*/
+  .zoom-bottom-left-2 {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: bottom left; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom-bottom-left-2:hover,  
+  .zoom-bottom-left-2:active,   
+  .zoom-bottom-left-2:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(2.08);    
+  -moz-transform: scale(2.08);  
+  -webkit-transform: scale(2.08);  
+  -o-transform: scale(2.08);  
+  transform: scale(2.08); 
+  }
+
+  /*ZOOM_BOTTOM_RIGHT_1*/
+  .zoom-bottom-right-1 {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: bottom right; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom-bottom-right-1:hover,  
+  .zoom-bottom-right-1:active,   
+  .zoom-bottom-right-1:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(1.5);    
+  -moz-transform: scale(1.5);  
+  -webkit-transform: scale(1.5);  
+  -o-transform: scale(1.5);  
+  transform: scale(1.5); 
+  }
+  
+  /*ZOOM_BOTTOM_RIGHT_2*/
+  .zoom-bottom-right-2 {
+  -webkit-transition: all 0.5s ease-in-out;    
+  -moz-transition: all 0.5s ease-in-out;    
+  transition: all 0.5s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;
+  transform-origin: bottom right; 
+  position: relative;
+  z-index:100;
+  }
+  
+  .zoom-bottom-right-2:hover,  
+  .zoom-bottom-right-2:active,   
+  .zoom-bottom-right-2:focus {
   /**adjust scale to desired size, 
   add browser prefixes**/
   -ms-transform: scale(2.08);    
